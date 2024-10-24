@@ -1,0 +1,20 @@
+@tailwind components;
+@tailwind utilities;
+
+h3.wp-block-heading {
+    @apply text-lg hover:text-slate-700;
+}
+
+.wp-block-heading {
+    @apply text-2xl font-bold my-4;
+}
+
+html {
+    @apply font-sans;
+}
+
+@layer components {
+}
+
+@layer utilities {
+}

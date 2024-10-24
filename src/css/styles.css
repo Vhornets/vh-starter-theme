@@ -1,0 +1,21 @@
+@import "./test.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h3.wp-block-heading {
+    @apply text-lg hover:text-slate-700;
+}
+
+@layer base {
+    h1 {
+        @apply text-5xl font-bold;
+    }
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
