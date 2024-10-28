@@ -1,16 +1,13 @@
 <?php
-
-/**
- * Add a pingback url auto-discovery header for single posts, pages, or attachments.
- */
+add_action('wp_head', 'vh_pingback_header');
 function vh_pingback_header()
 {
 	if (is_singular() && pings_open()) {
 		printf('<link rel="pingback" href="%s">', esc_url(get_bloginfo('pingback_url')));
 	}
 }
-add_action('wp_head', 'vh_pingback_header');
 
+add_filter('comment_form_defaults', 'vh_comment_form_defaults');
 function vh_comment_form_defaults($defaults)
 {
 	$comment_field = $defaults['comment_field'];
@@ -20,11 +17,8 @@ function vh_comment_form_defaults($defaults)
 
 	return $defaults;
 }
-add_filter('comment_form_defaults', 'vh_comment_form_defaults');
 
-/**
- * Filters the default archive titles.
- */
+add_filter('get_the_archive_title', 'vh_get_the_archive_title');
 function vh_get_the_archive_title()
 {
 	if (is_category()) {
@@ -42,14 +36,12 @@ function vh_get_the_archive_title()
 	} elseif (is_post_type_archive()) {
 		$cpt   = get_post_type_object(get_queried_object()->name);
 		$title = sprintf(
-			/* translators: %s: Post type singular name */
 			esc_html__('%s Archives', 'test'),
 			$cpt->labels->singular_name
 		);
 	} elseif (is_tax()) {
 		$tax   = get_taxonomy(get_queried_object()->taxonomy);
 		$title = sprintf(
-			/* translators: %s: Taxonomy singular name */
 			esc_html__('%s Archives', 'test'),
 			$tax->labels->singular_name
 		);
@@ -58,4 +50,3 @@ function vh_get_the_archive_title()
 	}
 	return $title;
 }
-add_filter('get_the_archive_title', 'vh_get_the_archive_title');

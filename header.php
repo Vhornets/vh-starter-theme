@@ -12,10 +12,10 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <nav class="sticky top-0 left-0 bg-white border-solid border-b-[1px] border-gray-200">
+    <nav class="sticky z-10 top-0 left-0 bg-white border-solid border-b-[1px] border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="<?php echo get_bloginfo('url'); ?>" class="flex items-center">
-                <img src="<?php echo get_field('logo', 'option')['url']; ?>" class="h-8 mr-3" alt="Flowbite Logo" />
+                <img src="<?php echo get_field('logo', 'option')['url']; ?>" class="h-8 mr-3" alt="" />
             </a>
 
             <button data-toggle-menu="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
