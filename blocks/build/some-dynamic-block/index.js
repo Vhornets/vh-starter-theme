@@ -132,7 +132,7 @@ module.exports = window["wp"]["i18n"];
   \**************************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"vh-fullsite/some-dynamic-block","version":"0.1.0","title":"Some Dynamic Block","category":"widgets","icon":"schedule","description":"Example block","supports":{"html":false},"attributes":{"text":{"type":"string","default":"Dynamic hello world"}},"textdomain":"vh-fullsite-some-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"vh-starter-theme/some-dynamic-block","version":"0.1.0","title":"Some Dynamic Block","category":"widgets","icon":"schedule","description":"Example block","supports":{"html":false},"attributes":{"text":{"type":"string","default":"Dynamic hello world"}},"textdomain":"vh-starter-theme-some-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
@@ -291,7 +291,7 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkvh_fullsite"] = self["webpackChunkvh_fullsite"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkvh_starter_theme"] = self["webpackChunkvh_starter_theme"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

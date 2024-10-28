@@ -4,7 +4,7 @@ function block_vh_some_dynamic_block_render_callback($block_attributes, $content
     $currentPostTitle = get_the_title();
 
     return sprintf(
-        '<h1 class="wp-block-vh-fullsite-some-dynamic-block">%1$s</h1>',
+        '<h1 class="wp-block-wp-block-vh-starter-theme-some-dynamic-block">%1$s</h1>',
         $currentPostTitle
     );
 }

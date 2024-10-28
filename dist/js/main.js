@@ -16,7 +16,7 @@
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\n\nconsole.log((0,_test__WEBPACK_IMPORTED_MODULE_0__.hello)());\n\ndocument.querySelectorAll(\"[data-toggle-menu]\").forEach((element) => {\n    element.addEventListener(\"click\", (e) => {\n        const $target = document.getElementById(\n            e.currentTarget.dataset.toggleMenu\n        );\n\n        $target.classList.toggle(\"hidden\");\n    });\n});\n\n\n//# sourceURL=webpack://vh-fullsite/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\n\nconsole.log((0,_test__WEBPACK_IMPORTED_MODULE_0__.hello)());\n\ndocument.querySelectorAll(\"[data-toggle-menu]\").forEach((element) => {\n    element.addEventListener(\"click\", (e) => {\n        const $target = document.getElementById(\n            e.currentTarget.dataset.toggleMenu\n        );\n\n        $target.classList.toggle(\"hidden\");\n    });\n});\n\n\n//# sourceURL=webpack://vh-starter-theme/./src/js/index.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tes
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   hello: () => (/* binding */ hello)\n/* harmony export */ });\nconst hello = () => {\n    return \"Hello from main theme js file\";\n};\n\n\n//# sourceURL=webpack://vh-fullsite/./src/js/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   hello: () => (/* binding */ hello)\n/* harmony export */ });\nconst hello = () => {\n    return \"Hello from main theme js file\";\n};\n\n\n//# sourceURL=webpack://vh-starter-theme/./src/js/test.js?");
 
 /***/ })
 

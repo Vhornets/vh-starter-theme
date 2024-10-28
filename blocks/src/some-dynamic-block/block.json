@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
-    "name": "vh-fullsite/some-dynamic-block",
+    "name": "vh-starter-theme/some-dynamic-block",
     "version": "0.1.0",
     "title": "Some Dynamic Block",
     "category": "widgets",
@@ -16,7 +16,7 @@
             "default": "Dynamic hello world"
         }
     },
-    "textdomain": "vh-fullsite-some-block",
+    "textdomain": "vh-starter-theme-some-block",
     "editorScript": "file:./index.js",
     "editorStyle": "file:./index.css",
     "style": "file:./style-index.css",
