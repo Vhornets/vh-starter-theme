@@ -16,7 +16,8 @@ function vh_after_setup_theme()
 {
     register_nav_menus(
         [
-            'menu-primary' => __('Primary', 'vh-starter-theme'),
+            'menu-primary' => __('Main menu', 'vh-starter-theme'),
+            'menu-footer' => __('Footer menu', 'vh-starter-theme'),
         ]
     );
 

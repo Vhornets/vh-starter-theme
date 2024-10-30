@@ -28,6 +28,7 @@
                 <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
                     <?php wp_nav_menu([
                         'menu' => 'menu-primary',
+                        'theme_location' => 'menu-primary',
                         'container' => false,
                         'items_wrap' => '%3$s',
                     ]); ?>

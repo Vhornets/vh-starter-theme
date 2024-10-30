@@ -8,9 +8,10 @@
             All Rights Reserved.
         </span>
 
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0 md:space-x-8">
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0 md:space-x-8">
             <?php wp_nav_menu([
-                'menu' => 'menu-primary',
+                'menu' => 'menu-footer',
+                'theme_location' => 'menu-footer',
                 'container' => false,
                 'items_wrap' => '%3$s',
             ]); ?>
