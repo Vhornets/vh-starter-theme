@@ -1,8 +1,8 @@
 {
     "name": "vh-starter-theme",
-    "version": "0.1.0",
-    "description": "Example block scaffolded with Create Block tool.",
-    "author": "The WordPress Contributors",
+    "version": "0.0.1",
+    "description": "Starter theme focused on development using gutenberg blocks.",
+    "author": "Viktor Shershnyov",
     "license": "GPL-2.0-or-later",
     "main": "build/index.js",
     "scripts": {
