@@ -39,9 +39,8 @@ function vh_after_setup_theme()
             'script',
         ]
     );
-    add_theme_support('wp-block-styles');
-
     add_theme_support('editor-styles');
+
     add_editor_style('dist/css/editor.css');
 
     remove_theme_support('block-templates');
