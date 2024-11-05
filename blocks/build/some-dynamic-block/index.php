@@ -9,6 +9,7 @@ function block_vh_some_dynamic_block_render_callback($block_attributes, $content
     );
 }
 
+add_action('init', 'register_block_vh_some_dynamic_block');
 function register_block_vh_some_dynamic_block()
 {
     register_block_type(
@@ -18,4 +19,3 @@ function register_block_vh_some_dynamic_block()
         ]
     );
 }
-add_action('init', 'register_block_vh_some_dynamic_block');

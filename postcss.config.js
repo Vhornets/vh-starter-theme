@@ -3,8 +3,6 @@ module.exports = {
         "postcss-import": {},
         tailwindcss: {},
         autoprefixer: {},
-        cssnano: {
-            preset: "default",
-        },
+        ...(process.env.NODE_ENV === "production" ? { cssnano: {} } : {}),
     },
 };

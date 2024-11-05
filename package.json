@@ -6,7 +6,7 @@
     "license": "GPL-2.0-or-later",
     "main": "build/index.js",
     "scripts": {
-        "start": "npm run start:blocks & npm run start:css-frontend & npm run start:css-editor & npm run start:js",
+        "start": "concurrently \"npm run start:blocks\" \"npm run start:css-frontend\" \"npm run start:css-editor\" \"npm run start:js\"",
         "start:js": "webpack --entry ./src/js/index.js --watch --output-path=./dist/js/ --config webpack.config.theme.js",
         "start:blocks": "wp-scripts start --webpack-src-dir=blocks/src/ --output-path=blocks/build/ --webpack-copy-php",
         "start:css-frontend": "postcss ./src/css/styles.css -m -o ./dist/css/styles.css -w --verbose",
@@ -23,6 +23,7 @@
         "@tailwindcss/typography": "^0.5.15",
         "@wordpress/scripts": "^26.12.0",
         "autoprefixer": "^10.4.16",
+        "concurrently": "^9.1.0",
         "cssnano": "^6.0.1",
         "postcss": "^8.4.30",
         "postcss-cli": "^10.1.0",
