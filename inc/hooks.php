@@ -41,8 +41,8 @@ function vh_add_block_categories($cats)
 }
 
 // Add support to SVG files for media uploads 
-add_filter('upload_mimes', 'vh_add_svg_support_for_uploads');
-function vh_add_svg_support_for_uploads($upload_mimes)
+add_filter('upload_mimes', 'vh_upload_mimes_add_svg');
+function vh_upload_mimes_add_svg($upload_mimes)
 {
     if (! current_user_can('administrator')) {
         return $upload_mimes;
@@ -52,4 +52,25 @@ function vh_add_svg_support_for_uploads($upload_mimes)
     $upload_mimes['svgz'] = 'image/svg+xml';
 
     return $upload_mimes;
+}
+
+add_filter('wp_check_filetype_and_ext', 'vh_wp_check_filetype_and_ext_add_svg', 10, 5);
+function vh_wp_check_filetype_and_ext_add_svg($wp_check_filetype_and_ext, $file, $filename, $mimes, $real_mime)
+{
+    if (! $wp_check_filetype_and_ext['type']) {
+
+        $check_filetype  = wp_check_filetype($filename, $mimes);
+        $ext             = $check_filetype['ext'];
+        $type            = $check_filetype['type'];
+        $proper_filename = $filename;
+
+        if ($type && 0 === strpos($type, 'image/') && 'svg' !== $ext) {
+            $ext  = false;
+            $type = false;
+        }
+
+        $wp_check_filetype_and_ext = compact('ext', 'type', 'proper_filename');
+    }
+
+    return $wp_check_filetype_and_ext;
 }
