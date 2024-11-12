@@ -9,6 +9,7 @@
         "start": "concurrently \"npm run start:blocks\" \"npm run start:css-frontend\" \"npm run start:css-editor\" \"npm run start:js\"",
         "start:js": "webpack --entry ./src/js/index.js --watch --output-path=./dist/js/ --config webpack.config.theme.js",
         "start:blocks": "wp-scripts start --webpack-src-dir=blocks/src/ --output-path=blocks/build/ --webpack-copy-php",
+        "start:css": "concurrently \"npm run start:css-frontend\" \"npm run start:css-editor\"",
         "start:css-frontend": "postcss ./src/css/styles.css -m -o ./dist/css/styles.css -w --verbose",
         "start:css-editor": "postcss ./src/css/styles.editor.css -o ./dist/css/editor.css -w",
         "build:blocks": "wp-scripts build --webpack-src-dir=blocks/src/ --output-path=blocks/build/ --webpack-copy-php",

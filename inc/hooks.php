@@ -58,7 +58,6 @@ add_filter('wp_check_filetype_and_ext', 'vh_wp_check_filetype_and_ext_add_svg', 
 function vh_wp_check_filetype_and_ext_add_svg($wp_check_filetype_and_ext, $file, $filename, $mimes, $real_mime)
 {
     if (! $wp_check_filetype_and_ext['type']) {
-
         $check_filetype  = wp_check_filetype($filename, $mimes);
         $ext             = $check_filetype['ext'];
         $type            = $check_filetype['type'];
